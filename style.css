@@ -5,13 +5,89 @@
 }
 
 :root{
+    --bg-white:#FFFFFF;
+    --text-color:#323238;
+    --bg-card-light:#E1E1E6;
+
+
+    
+    --font: 'Roboto', sans-serif;
+
+    /* Font size */
     font-size: 62.5%;
 }
 
 body{
+    display: grid;
+    place-content: center;
+    font-family: var(--font);
+    height: 100vh;
     font-size: 1.6rem;
 }
 
 .hide{
     display: none;
 }
+
+svg path{
+    fill: var(--text-color);
+}
+
+.container{
+    max-width: 82.1rem;
+}
+
+main{
+    display: flex;
+    gap: 19.2rem;
+    justify-content: center;
+    align-items:center;
+}
+
+.timer{
+    display: flex;
+    font-size: 12.6rem;
+    color: var(--text-color);
+}
+
+#controls{
+    display: flex;
+    gap: 4rem;
+    border: 1px;
+}
+
+.control{
+    background-color: transparent;
+    border: none;
+}
+
+.control svg {
+    width: 4.8rem;
+    cursor: pointer;
+}
+
+
+#buttons-wrapper{
+    display: grid;
+    grid-template-areas: "A B"
+    "C D";
+    grid-gap: 3.2rem;
+}
+
+.card{
+    width: 13.8rem;
+    height: 15.2rem;
+    background-color: var(--bg-card-light);
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    border-radius: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card svg{
+    width: 4.4rem;
+}
+
