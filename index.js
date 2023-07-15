@@ -30,5 +30,5 @@ function updateDisplay(minutes, seconds){
 
 play.addEventListener("click", () =>{
     alert("play")
-
+    coutdown()
 })
