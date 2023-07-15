@@ -3,13 +3,28 @@ const pause = document.querySelector(".pause")
 const stop = document.querySelector(".stop")
 const more = document.querySelector(".more")
 const less = document.querySelector(".less")
-let minutes = document.querySelector(".minutes")
+const minutesDisplay = document.querySelector(".minutes")
+const secondsDisplay = document.querySelector(".seconds")
 let timeout
 
 function coutdown() {
     setTimeout(() => {
+        let minutes = Number(minutesDisplay.textContent);
+        let seconds = Number(secondsDisplay.textContent);
+
+        if(seconds <=0){
+           seconds =10
+
+           --minutes
+        }
+
         
     }, 1000);
+}
+
+function updateDisplay(){
+    minutesDisplay.textContent = String(minutes).padStart(2,'0')
+    secondsDisplay.textContent = String(seconds).padStart(2,'0')
 }
 
 play.addEventListener("click", () =>{
