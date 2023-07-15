@@ -18,11 +18,12 @@ function coutdown() {
            --minutes
         }
 
-        
+        updateDisplay(minutes,seconds)
+        coutdown()
     }, 1000);
 }
 
-function updateDisplay(){
+function updateDisplay(minutes, seconds){
     minutesDisplay.textContent = String(minutes).padStart(2,'0')
     secondsDisplay.textContent = String(seconds).padStart(2,'0')
 }
