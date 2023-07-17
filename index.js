@@ -44,4 +44,5 @@ play.addEventListener("click", () =>{
 pause.addEventListener("click", () =>{
     alert("pause")
     clearTimeout(timeout)
+    play.classList.remove("hide")
 })
