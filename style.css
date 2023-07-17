@@ -91,7 +91,7 @@ main{
     width: 4.4rem;
 }
 
-@media(min-width:700px){
+@media(max-width:700px){
     main{
         flex-direction: column;
         gap:1rem;
