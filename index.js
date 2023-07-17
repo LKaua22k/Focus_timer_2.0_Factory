@@ -12,6 +12,11 @@ function coutdown() {
         let minutes = Number(minutesDisplay.textContent);
         let seconds = Number(secondsDisplay.textContent);
 
+        if(minutes <=0 && seconds <= 0){
+            updateDisplay(minutes,seconds)
+            return
+        }
+
         if(seconds <= 0){
            seconds = 10
 
@@ -32,10 +37,11 @@ play.addEventListener("click", () =>{
     alert("play")
     play.classList.add("hide")
     pause.classList.remove("hide")
+    stop.classList.remove("hide")
     coutdown()
 })
 
 pause.addEventListener("click", () =>{
     alert("pause")
-    setInterval(timeout)
+    clearTimeout(timeout)
 })

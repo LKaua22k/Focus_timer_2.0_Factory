@@ -63,6 +63,7 @@ main{
 
 .control svg {
     width: 4.8rem;
+    height: 4.8rem;
     cursor: pointer;
 }
 
