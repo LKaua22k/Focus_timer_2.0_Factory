@@ -8,17 +8,17 @@ const secondsDisplay = document.querySelector(".seconds")
 let timeout
 
 function coutdown() {
-    setTimeout(() => {
+    timeout = setTimeout(() => {
         let minutes = Number(minutesDisplay.textContent);
         let seconds = Number(secondsDisplay.textContent);
 
-        if(seconds <=0){
-           seconds =10
+        if(seconds <= 0){
+           seconds = 10
 
            --minutes
         }
 
-        updateDisplay(minutes,seconds)
+        updateDisplay(minutes,String(seconds -1))
         coutdown()
     }, 1000);
 }
@@ -30,5 +30,12 @@ function updateDisplay(minutes, seconds){
 
 play.addEventListener("click", () =>{
     alert("play")
+    play.classList.add("hide")
+    pause.classList.remove("hide")
     coutdown()
+})
+
+pause.addEventListener("click", () =>{
+    alert("pause")
+    setInterval(timeout)
 })
