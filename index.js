@@ -28,6 +28,10 @@ function coutdown() {
     }, 1000);
 }
 
+function moreMinutes(){
+    let minutes = Number(minutesDisplay.textContent)
+}
+
 function updateDisplay(minutes, seconds){
     minutesDisplay.textContent = String(minutes).padStart(2,'0')
     secondsDisplay.textContent = String(seconds).padStart(2,'0')
@@ -45,4 +49,5 @@ pause.addEventListener("click", () =>{
     alert("pause")
     clearTimeout(timeout)
     play.classList.remove("hide")
+    pause.classList.remove("hide")
 })
