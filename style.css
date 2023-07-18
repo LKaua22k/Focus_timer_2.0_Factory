@@ -54,6 +54,8 @@ main{
     display: flex;
     gap: 4rem;
     border: 1px;
+    align-items: center;
+    justify-content: center;
 }
 
 .control{

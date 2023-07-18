@@ -5,6 +5,7 @@ const more = document.querySelector(".more")
 const less = document.querySelector(".less")
 const minutesDisplay = document.querySelector(".minutes")
 const secondsDisplay = document.querySelector(".seconds")
+let minutes = minutesDisplay.textContent
 let timeout
 
 function coutdown() {
@@ -29,7 +30,23 @@ function coutdown() {
 }
 
 function moreMinutes(){
-    let minutes = Number(minutesDisplay.textContent)
+    let minutes = Number(minutesDisplay.textContent) + 5
+
+    if(minutes >= 100){
+        minutes = 100
+    }
+    
+    updateDisplay(minutes,0)
+}
+
+function lessMinutes(){
+    let minutes = Number(minutesDisplay.textContent) - 5
+
+    if(minutes < 0){
+        minutes = 0
+    }
+
+    updateDisplay(minutes, 0)
 }
 
 function updateDisplay(minutes, seconds){
@@ -48,6 +65,22 @@ play.addEventListener("click", () =>{
 pause.addEventListener("click", () =>{
     alert("pause")
     clearTimeout(timeout)
+    pause.classList.add("hide")
     play.classList.remove("hide")
-    pause.classList.remove("hide")
+})
+
+stop.addEventListener("click", () =>{
+    updateDisplay(minutes, 0)
+    clearTimeout(timeout)
+    pause.classList.add("hide")
+    play.classList.remove("hide")
+    stop.classList.add("hide")
+})
+
+more.addEventListener("click",() =>{
+    moreMinutes()
+})
+
+less.addEventListener("click",() =>{
+    lessMinutes()
 })
