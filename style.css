@@ -25,6 +25,32 @@ body{
     font-size: 1.6rem;
 }
 
+.slider{
+    appearance: none;
+    width: 9rem;
+    height: .4rem;
+    border-radius: .5rem;
+    background-color: var(--text-color);
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.6rem;
+    background: var(--text-color);
+    cursor: pointer;
+    border-radius: 9999999px;
+  }
+  
+  .slider::-moz-range-thumb {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.6rem;
+    background: var(--text-color);
+    cursor: pointer;
+    border-radius: 9999999px;
+  }
+
 .hide{
     display: none;
 }
@@ -89,6 +115,7 @@ main{
     justify-content: center;
     cursor: pointer;
 }
+
 
 .card svg{
     width: 4.4rem;
