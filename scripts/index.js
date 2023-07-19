@@ -69,7 +69,7 @@ less.addEventListener("click",() =>{
 })
 
 forest.addEventListener("click",() =>{
-    bgForest.play()
+    sound.bgForest.play()
 })
 
 
