@@ -9,12 +9,31 @@ const less = document.querySelector(".less")
 const minutesDisplay = document.querySelector(".minutes")
 const secondsDisplay = document.querySelector(".seconds")
 let minutes = minutesDisplay.textContent
+let forest = document.querySelector(".forest")
+
+let volumeForest = document.querySelector("#volumeForest")
+let volumeRain = document.querySelector("#volumeRain")
+let volumeCoffe = document.querySelector("#volumeCoffe")
+let volumeFire = document.querySelector("#volumeFire")
+
+
 
 const timer = Timer({
     minutesDisplay,
     secondsDisplay,
     minutes
 })
+
+const bgForest = new Audio("./sound/Floresta.wav")
+bgForest.volume = volumeForest.value;
+
+bgForest.loop = true;
+
+function setvolume(){
+    bgForest.volume = volumeForest.value
+}
+
+
 
 play.addEventListener("click", () =>{
     alert("play")
@@ -46,3 +65,10 @@ more.addEventListener("click",() =>{
 less.addEventListener("click",() =>{
     timer.lessMinutes()
 })
+
+forest.addEventListener("click",() =>{
+    bgForest.play()
+})
+
+
+volumeForest.addEventListener("mousemove",setvolume)
