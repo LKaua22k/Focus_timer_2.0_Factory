@@ -69,8 +69,12 @@ less.addEventListener("click",() =>{
 })
 
 forest.addEventListener("click",() =>{
+    alert("play")
     sound.bgForest.play()
 })
 
+volumeForest.addEventListener("click",() =>{
+    alert("mexendo")
+})
 
 volumeForest.addEventListener("mousemove",setvolume)
