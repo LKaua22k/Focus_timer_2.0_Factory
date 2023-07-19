@@ -1,4 +1,5 @@
 import Timer from "./timer.js"
+import Sound from "./sound.js"
 
 
 const play = document.querySelector(".play")
@@ -24,13 +25,14 @@ const timer = Timer({
     minutes
 })
 
-const bgForest = new Audio("./sound/Floresta.wav")
-bgForest.volume = volumeForest.value;
+const sound = Sound({
+    volumeForest
+})
 
-bgForest.loop = true;
+
 
 function setvolume(){
-    bgForest.volume = volumeForest.value
+    sound.bgForest.volume = volumeForest.value
 }
 
 
