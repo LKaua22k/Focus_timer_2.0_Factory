@@ -1,5 +1,5 @@
 import Timer from "./timer.js"
-import Sound from "./sound.js"
+import Sound from "./soundsjs"
 
 
 const play = document.querySelector(".play")
