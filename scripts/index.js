@@ -11,6 +11,9 @@ const minutesDisplay = document.querySelector(".minutes")
 const secondsDisplay = document.querySelector(".seconds")
 let minutes = minutesDisplay.textContent
 let forest = document.querySelector(".forest")
+let rain = document.querySelector(".rain")
+let coffe = document.querySelector(".coffe")
+let fire = document.querySelector(".fire")
 
 let volumeForest = document.querySelector("#volumeForest")
 let volumeRain = document.querySelector("#volumeRain")
@@ -26,13 +29,19 @@ const timer = Timer({
 })
 
 const sound = Sound({
-    volumeForest
+    volumeForest,
+    volumeRain,
+    volumeCoffe,
+    volumeFire
 })
 
 
 
 function setvolume(){
     sound.bgForest.volume = volumeForest.value
+    sound.bgRain.volume = volumeRain.value
+    sound.bgCoffe.volume = volumeCoffe.value
+    sound.bgFire.volume = volumeFire.value
 }
 
 
@@ -69,12 +78,25 @@ less.addEventListener("click",() =>{
 })
 
 forest.addEventListener("click",() =>{
-    alert("play")
+    // alert("forest")
     sound.bgForest.play()
 })
 
+rain.addEventListener("click",() =>{
+    // alert("rain")
+    sound.bgRain.play()
+})
+
+coffe.addEventListener("click",() =>{
+    // alert("coffe")
+    sound.bgCoffe.play()
+})
+
 volumeForest.addEventListener("click",() =>{
-    alert("mexendo")
+    // alert("mexendo")
 })
 
 volumeForest.addEventListener("mousemove",setvolume)
+volumeRain.addEventListener("mousemove",setvolume)
+volumeCoffe.addEventListener("mousemove",setvolume)
+volumeFire.addEventListener("mousemove",setvolume)
