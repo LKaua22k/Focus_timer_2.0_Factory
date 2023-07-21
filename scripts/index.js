@@ -45,7 +45,7 @@ function setvolume(){
 
 
 play.addEventListener("click", () =>{
-    alert("play")
+    // alert("play")
     play.classList.add("hide")
     pause.classList.remove("hide")
     stop.classList.remove("hide")
@@ -53,7 +53,7 @@ play.addEventListener("click", () =>{
 })
 
 pause.addEventListener("click", () =>{
-    alert("pause")
+    // alert("pause")
     timer.cTimer()
     pause.classList.add("hide")
     play.classList.remove("hide")
@@ -61,7 +61,7 @@ pause.addEventListener("click", () =>{
 
 stop.addEventListener("click", () =>{
     timer.updateDisplay(minutes, 0)
-    clearTimeout(timeout)
+    timer.cTimer()
     pause.classList.add("hide")
     play.classList.remove("hide")
     stop.classList.add("hide")
