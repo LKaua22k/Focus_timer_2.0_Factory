@@ -1,5 +1,5 @@
 export default function Sound({
-    volumeForest,
+    vF,
     volumeRain,
     volumeCoffe,
     volumeFire
@@ -7,7 +7,7 @@ export default function Sound({
 
     const bgForest = new Audio("./sound/Floresta.wav")
     
-    bgForest.volume = volumeForest.value;
+    bgForest.volume = vF.value;
 
     bgForest.loop = true;
 

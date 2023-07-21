@@ -31,6 +31,10 @@ body{
     height: .4rem;
     border-radius: .5rem;
     background-color: var(--text-color);
+    position: absolute;
+    bottom: 2.4rem;
+    left: 2.4rem;
+
 }
 
 .slider::-webkit-slider-thumb {
@@ -103,6 +107,10 @@ main{
     grid-gap: 3.2rem;
 }
 
+.card-wrapper{
+    position: relative;
+}
+
 .card{
     width: 13.8rem;
     height: 15.2rem;
@@ -114,12 +122,12 @@ main{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: relative;
 }
 
 
 .card svg{
     width: 4.4rem;
+    margin-bottom: 2rem;
 }
 
 .ef{
@@ -131,11 +139,11 @@ main{
     fill: var(--bg-white);
 }
 
-.ef .slider{
+.ef + .slider{
     background-color: var(--bg-white);   
 }
 
-.ef .slider::-webkit-slider-thumb{
+.ef + .slider::-webkit-slider-thumb{
     background-color: var(--bg-white);   
 }
 
