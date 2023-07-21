@@ -97,12 +97,24 @@ rain.addEventListener("click",() =>{
 })
 
 coffe.addEventListener("click",() =>{
-    // alert("coffe")
+    if(coffe.classList.contains("ec")){
+        coffe.classList.remove("ec")
+        sound.bgCoffe.pause()
+        return;
+    }
+
+    coffe.classList.add("ec")
     sound.bgCoffe.play()
 })
 
 fire.addEventListener("click",() =>{
-    // alert("coffe")
+    if(fire.classList.contains("efi")){
+        fire.classList.remove("efi")
+        sound.bgFire.pause()
+        return;
+    }
+    
+    fire.classList.add("efi")
     sound.bgFire.play()
 })
 

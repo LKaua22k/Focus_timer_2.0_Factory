@@ -131,7 +131,7 @@ main{
 }
 
 .ef{
-    background-color: green;
+    background-color: #029D53;
     transition: 0.5s;
 }
 
@@ -148,7 +148,7 @@ main{
 }
 
 .er{
-    background-color: lightblue;
+    background-color: #02789D;
     transition: 0.5s;
 }
 
@@ -164,6 +164,13 @@ main{
     background-color: var(--bg-white);   
 }
 
+.ec{
+    background-color: #9D3A02;
+}
+
+.efi {
+    background-color: #9D0B02;
+}
 
 
 @media(max-width:700px){
