@@ -12,20 +12,20 @@ export default function Sound({
     bgForest.loop = true;
 
     const bgRain = new Audio("./sound/Chuva.wav")
-
-    bgRain = volumeRain.value
+    
+    bgRain.volume = volumeRain.value;
 
     bgRain.loop = true;
 
     const bgCoffe = new Audio("./sound/Cafeteria.wav")
-
-    bgCoffe = volumeCoffe.value
+    
+    bgCoffe.volume = volumeCoffe.value;
 
     bgCoffe.loop = true;
-
+    
     const bgFire = new Audio("./sound/Lareira.wav")
 
-    bgFire = volumeFire.value
+    bgFire.volume = volumeFire.value;
 
     bgFire.loop = true;
 

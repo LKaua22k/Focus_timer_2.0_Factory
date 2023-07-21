@@ -20,6 +20,15 @@ let volumeRain = document.querySelector("#volumeRain")
 let volumeCoffe = document.querySelector("#volumeCoffe")
 let volumeFire = document.querySelector("#volumeFire")
 
+function closeCard(card){
+    card.addEventListener("dblclick", () => {
+        if(forest.classList.contains("ef")){
+            forest.classList.remove("ef")
+            sound.bgForest.pause()
+            return;
+        }
+    })
+}
 
 
 const timer = Timer({
@@ -78,7 +87,8 @@ less.addEventListener("click",() =>{
 })
 
 forest.addEventListener("click",() =>{
-    // alert("forest")
+    closeCard(forest)
+    forest.classList.add("ef")
     sound.bgForest.play()
 })
 
@@ -92,7 +102,12 @@ coffe.addEventListener("click",() =>{
     sound.bgCoffe.play()
 })
 
-volumeForest.addEventListener("click",() =>{
+fire.addEventListener("click",() =>{
+    // alert("coffe")
+    sound.bgFire.play()
+})
+
+volumeRain.addEventListener("click",() =>{
     // alert("mexendo")
 })
 

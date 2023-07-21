@@ -114,11 +114,29 @@ main{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 
 .card svg{
     width: 4.4rem;
+}
+
+.ef{
+    background-color: green;
+    transition: 0.5s;
+}
+
+.ef svg path{
+    fill: var(--bg-white);
+}
+
+.ef .slider{
+    background-color: var(--bg-white);   
+}
+
+.ef .slider::-webkit-slider-thumb{
+    background-color: var(--bg-white);   
 }
 
 @media(max-width:700px){
