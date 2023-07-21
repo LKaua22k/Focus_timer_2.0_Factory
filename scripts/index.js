@@ -15,7 +15,7 @@ let rain = document.querySelector(".rain")
 let coffe = document.querySelector(".coffe")
 let fire = document.querySelector(".fire")
 
-let vF = document.querySelector("#volumeForest")
+let volumeForest = document.querySelector("#volumeForest")
 let volumeRain = document.querySelector("#volumeRain")
 let volumeCoffe = document.querySelector("#volumeCoffe")
 let volumeFire = document.querySelector("#volumeFire")
@@ -28,12 +28,11 @@ const timer = Timer({
 })
 
 const sound = Sound({
-    vF,
+    volumeForest,
     volumeRain,
     volumeCoffe,
     volumeFire
 })
-
 
 
 function setvolume(){
@@ -87,8 +86,13 @@ forest.addEventListener("click",() =>{
 })
 
 rain.addEventListener("click",() =>{
-    // alert("rain")
-    closeCard(rain)
+    if(rain.classList.contains("er")){
+        rain.classList.remove("er")
+        sound.bgRain.pause()
+        return;
+    }
+    
+    rain.classList.add("er")
     sound.bgRain.play()
 })
 
@@ -102,10 +106,10 @@ fire.addEventListener("click",() =>{
     sound.bgFire.play()
 })
 
-vF.addEventListener("click",() =>{
+volumeForest.addEventListener("click",() =>{
 })
 
-vF.addEventListener("mousemove",setvolume)
+volumeForest.addEventListener("mousemove",setvolume)
 volumeRain.addEventListener("mousemove",setvolume)
 volumeCoffe.addEventListener("mousemove",setvolume)
 volumeFire.addEventListener("mousemove",setvolume)

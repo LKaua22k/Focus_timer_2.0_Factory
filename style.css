@@ -147,6 +147,25 @@ main{
     background-color: var(--bg-white);   
 }
 
+.er{
+    background-color: lightblue;
+    transition: 0.5s;
+}
+
+.er svg path{
+    fill: var(--bg-white);
+}
+
+.er + .slider{
+    background-color: var(--bg-white);   
+}
+
+.er + .slider::-webkit-slider-thumb{
+    background-color: var(--bg-white);   
+}
+
+
+
 @media(max-width:700px){
     main{
         flex-direction: column;
