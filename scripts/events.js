@@ -18,7 +18,7 @@ import {
 } from "./elements.js"
 
 
-export default function Events({timer , sound,setvolume}){
+export default function Events({timer , sound,setvolume,remo}){
     play.addEventListener("click", () =>{
         // alert("play")
         play.classList.add("hide")
@@ -56,6 +56,8 @@ export default function Events({timer , sound,setvolume}){
             sound.bgForest.pause()
             return;
         }
+
+        remo(rain,coffe,fire)
         forest.classList.add("ef")
         sound.bgForest.play()
     })

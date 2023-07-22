@@ -42,4 +42,10 @@ function setvolume(){
     sound.bgFire.volume = volumeFire.value
 }
 
-Events({timer, sound, setvolume})
+function remo(b1,b2,b3){
+    b1.classlist.add("teste")
+    b2.classlist.add("teste")
+    b3.classlist.add("teste")
+}
+
+Events({timer, sound, setvolume, remo})
