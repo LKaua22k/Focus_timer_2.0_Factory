@@ -18,7 +18,7 @@ import {
 } from "./elements.js"
 
 
-export default function Events({timer , sound,setvolume}){
+export default function Events({timer , sound,setvolume,trade}){
     play.addEventListener("click", () =>{
         // alert("play")
         play.classList.add("hide")
@@ -56,8 +56,12 @@ export default function Events({timer , sound,setvolume}){
             sound.bgForest.pause()
             return;
         }
+        
         forest.classList.add("ef")
         sound.bgForest.play()
+        trade.removeRain()
+        trade.removeCoffe()
+        trade.removeFire()
     })
     
     rain.addEventListener("click",() =>{
@@ -69,6 +73,9 @@ export default function Events({timer , sound,setvolume}){
         
         rain.classList.add("er")
         sound.bgRain.play()
+        trade.removeForest()
+        trade.removeCoffe()
+        trade.removeFire()
     })
     
     coffe.addEventListener("click",() =>{
@@ -80,6 +87,9 @@ export default function Events({timer , sound,setvolume}){
     
         coffe.classList.add("ec")
         sound.bgCoffe.play()
+        trade.removeForest()
+        trade.removeRain()
+        trade.removeFire()
     })
     
     fire.addEventListener("click",() =>{
@@ -91,6 +101,9 @@ export default function Events({timer , sound,setvolume}){
         
         fire.classList.add("efi")
         sound.bgFire.play()
+        trade.removeForest()
+        trade.removeRain()
+        trade.removeCoffe()
     })
     
     volumeForest.addEventListener("click",() =>{

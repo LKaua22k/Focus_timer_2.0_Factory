@@ -126,6 +126,8 @@ main{
 }
 
 
+
+
 .card svg{
     width: 4.4rem;
     margin-bottom: 2rem;
@@ -204,7 +206,6 @@ main{
 .efi + .slider::-webkit-slider-thumb{
     background-color: var(--bg-white);   
 }
-
 
 @media(max-width:700px){
     main{

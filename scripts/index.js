@@ -1,5 +1,6 @@
 import Timer from "./timer.js"
 import Sound from "./sounds.js"
+import Trade from "./trade.js"
 import {
     play,
     pause,
@@ -35,6 +36,8 @@ const sound = Sound({
     volumeFire
 })
 
+const trade = Trade({sound})
+
 function setvolume(){
     sound.bgForest.volume = volumeForest.value
     sound.bgRain.volume = volumeRain.value
@@ -42,4 +45,5 @@ function setvolume(){
     sound.bgFire.volume = volumeFire.value
 }
 
-Events({timer, sound, setvolume})
+
+Events({timer, sound, setvolume,trade})
