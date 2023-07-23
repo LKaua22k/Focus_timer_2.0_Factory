@@ -25,6 +25,10 @@ body{
     font-size: 1.6rem;
 }
 
+.teste{
+    background-color: #E1E1E6;
+}
+
 .slider{
     appearance: none;
     width: 9rem;
