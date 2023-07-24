@@ -47,3 +47,7 @@ function setvolume(){
 
 
 Events({timer, sound, setvolume,trade})
+
+const btnLight = document.querySelector(".btn_light")
+const btnLight = document.querySelector(".btn_darck")
+
