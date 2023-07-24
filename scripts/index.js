@@ -49,5 +49,22 @@ function setvolume(){
 Events({timer, sound, setvolume,trade})
 
 const btnLight = document.querySelector(".btn_light")
-const btnLight = document.querySelector(".btn_darck")
+const btnDarck = document.querySelector(".btn_darck")
+const html = document.documentElement
+
+btnLight.addEventListener("click", () => {
+    
+    btnLight.classList.add("hide")
+    btnDarck.classList.remove("hide")
+    html.classList.add("darck")
+
+})
+
+btnDarck.addEventListener("click", () => {
+    
+    btnLight.classList.remove("hide")
+    btnDarck.classList.add("hide")
+    html.classList.remove("darck")
+
+})
 
