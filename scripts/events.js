@@ -24,6 +24,7 @@ import {
 export default function Events({timer , sound,setvolume,trade}){
     play.addEventListener("click", () =>{
         // alert("play")
+        sound.buttonPressAudio.play()
         play.classList.add("hide")
         pause.classList.remove("hide")
         stop.classList.remove("hide")
@@ -32,12 +33,14 @@ export default function Events({timer , sound,setvolume,trade}){
     
     pause.addEventListener("click", () =>{
         // alert("pause")
+        sound.buttonPressAudio.play()
         timer.cTimer()
         pause.classList.add("hide")
         play.classList.remove("hide")
     })
     
     stop.addEventListener("click", () =>{
+        sound.buttonPressAudio.play()
         timer.updateDisplay(minutes, 0)
         timer.cTimer()
         pause.classList.add("hide")
@@ -46,10 +49,12 @@ export default function Events({timer , sound,setvolume,trade}){
     })
     
     more.addEventListener("click",() =>{
+        sound.buttonPressAudio.play()
         timer.moreMinutes()
     })
     
     less.addEventListener("click",() =>{
+        sound.buttonPressAudio.play()
         timer.lessMinutes()
     })
     

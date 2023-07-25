@@ -5,6 +5,14 @@ export default function Sound({
     volumeFire
 }) {
 
+    const buttonPressAudio = new Audio(
+        "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true"
+      )
+
+    const kitchenTimer = new Audio(
+        "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true"
+      )
+
     const bgForest = new Audio("./sound/Floresta.wav")
     
     bgForest.volume = volumeForest.value;
@@ -33,6 +41,8 @@ export default function Sound({
         bgForest,
         bgRain,
         bgCoffe,
-        bgFire
+        bgFire,
+        buttonPressAudio,
+        kitchenTimer
     }
 }
