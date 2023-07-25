@@ -13,6 +13,8 @@ export default function Sound({
         "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true"
       )
 
+    kitchenTimer.loop = true;
+
     const bgForest = new Audio("./sound/Floresta.wav")
     
     bgForest.volume = volumeForest.value;

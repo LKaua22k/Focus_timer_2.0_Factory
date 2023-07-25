@@ -124,13 +124,14 @@ export default function Events({timer , sound,setvolume,trade}){
 }
 
 btnLight.addEventListener("click", () => {
+    sound.buttonPressAudio.play()
     btnLight.classList.add("hide")
     btnDarck.classList.remove("hide")
     html.classList.add("darck")
-
 })
 
 btnDarck.addEventListener("click", () => {
+    sound.buttonPressAudio.play()
     btnLight.classList.remove("hide")
     btnDarck.classList.add("hide")
     html.classList.remove("darck")

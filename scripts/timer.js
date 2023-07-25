@@ -1,3 +1,5 @@
+import Sound from "./sounds.js" 
+
 export default function Timer({
     minutesDisplay,
     secondsDisplay,
@@ -11,6 +13,7 @@ export default function Timer({
             let seconds = Number(secondsDisplay.textContent);
     
             if(minutes <=0 && seconds <= 0){
+                Sound.kitchenTimer.play()
                 updateDisplay(minutes,seconds)
                 return
             }
