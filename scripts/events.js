@@ -121,7 +121,6 @@ export default function Events({timer , sound,setvolume,trade}){
     volumeRain.addEventListener("mousemove",setvolume)
     volumeCoffe.addEventListener("mousemove",setvolume)
     volumeFire.addEventListener("mousemove",setvolume)
-}
 
 btnLight.addEventListener("click", () => {
     sound.buttonPressAudio.play()
@@ -137,3 +136,4 @@ btnDarck.addEventListener("click", () => {
     html.classList.remove("darck")
 
 })
+}
