@@ -16,6 +16,10 @@ let volumeRain = document.querySelector("#volumeRain")
 let volumeCoffe = document.querySelector("#volumeCoffe")
 let volumeFire = document.querySelector("#volumeFire")
 
+const btnLight = document.querySelector(".btn_light")
+const btnDarck = document.querySelector(".btn_darck")
+const html = document.documentElement
+
 
 export {
     play,
@@ -33,5 +37,8 @@ export {
     volumeForest,
     volumeRain,
     volumeCoffe,
-    volumeFire
+    volumeFire,
+    btnLight,
+    btnDarck,
+    html
 }

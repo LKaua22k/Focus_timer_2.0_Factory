@@ -222,6 +222,7 @@ main{
   position: absolute;
   right: 6.4rem;
   top: 6.4rem;
+  cursor: pointer;
 }
 
 @media(max-width:700px){

@@ -15,6 +15,9 @@ import {
     volumeRain,
     volumeCoffe,
     volumeFire,
+    btnLight,
+    btnDarck,
+    html
 } from "./elements.js"
 
 
@@ -114,3 +117,17 @@ export default function Events({timer , sound,setvolume,trade}){
     volumeCoffe.addEventListener("mousemove",setvolume)
     volumeFire.addEventListener("mousemove",setvolume)
 }
+
+btnLight.addEventListener("click", () => {
+    btnLight.classList.add("hide")
+    btnDarck.classList.remove("hide")
+    html.classList.add("darck")
+
+})
+
+btnDarck.addEventListener("click", () => {
+    btnLight.classList.remove("hide")
+    btnDarck.classList.add("hide")
+    html.classList.remove("darck")
+
+})
