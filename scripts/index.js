@@ -26,17 +26,18 @@ import {
 import Events from "./events.js"
 
 
-const timer = Timer({
-    minutesDisplay,
-    secondsDisplay,
-    minutes
-})
-
 const sound = Sound({
     volumeForest,
     volumeRain,
     volumeCoffe,
     volumeFire
+})
+
+const timer = Timer({
+    minutesDisplay,
+    secondsDisplay,
+    minutes,
+    sound
 })
 
 const trade = Trade({sound})
